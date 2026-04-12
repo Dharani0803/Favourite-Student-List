@@ -40,7 +40,7 @@ A React-based Student Management System with student list, favourites system, re
 
 ### 🧭 Routing System
 - React Router navigation between pages:
-  Login → Signup → Home → Student List → Favourite Students
+  Signup → Login → Home → Student List → Favourite Students
 
 ---
 
