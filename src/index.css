@@ -1,0 +1,98 @@
+@import "tailwindcss"; 
+
+@media screen and (max-width:900px) {
+    /* MAIN LAYOUT */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  font-size: 12px;
+}
+
+/* TEXT AREA */
+.content-text {
+  padding: 20px;
+  margin-left: 40px;
+  flex: 1;
+}
+
+.content-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+.content-desc {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background-color: #1F5AA6;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-right: 15px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: #1F5AA6;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #1F5AA6;
+  color: white;
+}
+
+/* IMAGE */
+.content-image {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-image img {
+  width: 300px;
+}
+
+.form-box {
+    width: 85%;
+    padding: 25px;
+  }
+
+  .form-title {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .form-label {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .form-btn {
+    width: 100%;
+  }
+}
