@@ -1,98 +1,154 @@
 @import "tailwindcss"; 
 
 @media screen and (max-width:900px) {
-    /* MAIN LAYOUT */
-.content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  font-size: 12px;
-}
-
-/* TEXT AREA */
-.content-text {
-  padding: 20px;
-  margin-left: 40px;
-  flex: 1;
-}
 
 .content-title {
-  font-size: 25px;
+  font-size: large;
   font-weight: bold;
   color: #333;
-  margin: 20px 0;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 
 .content-desc {
-  font-size: 16px;
+  font-size: medium;
   margin-bottom: 30px;
 }
 
-/* BUTTONS */
-.btn-primary {
-  background-color: #1F5AA6;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  margin-right: 15px;
-  border: 2px solid #ccc;
-  cursor: pointer;
+.btn-secondary, .btn-primary {
+  font-size: small;
+  padding: 10px 12px;
 }
 
-.btn-secondary {
-  color: #1F5AA6;
-  padding: 12px 18px;
-  border-radius: 30px;
-  font-weight: bold;
-  border: 2px solid #ccc;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background-color: #1F5AA6;
-  color: white;
-}
-
-/* IMAGE */
 .content-image {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-
-.content-image img {
-  width: 300px;
+.cre-con{
+  margin-top: 30px;
 }
-
 .form-box {
     width: 85%;
-    padding: 25px;
+    padding: 50px 30px ;
   }
-
+.form-area{
+  padding: 0px 28px;
+}
   .form-title {
-    font-size: 18px;
+    font-size: larger;
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .form-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
   }
 
   .form-label {
-    width: 100%;
     text-align: left;
-    font-size: 14px;
+    font-size: medium;
   }
 
   .form-input {
+    font-size: small;
     width: 100%;
   }
 
   .form-btn {
     width: 100%;
+    font-size: medium;
   }
+
+  .abt-container{
+    margin: 20px 0;
+  }
+
+  .abt-box{
+    width: 80%;
+    padding: 40px  ;
+  }
+  .abt-title{
+    font-size: larger;
+    margin-bottom: 20px;
+  }
+  .abt-content{
+    font-size: medium;
+  }
+  .con-box{
+    width: 90%;
+  }
+  .con-title{
+    font-size: larger;
+    margin-bottom: 10px;
+  }
+  .con-btn{
+    font-size: 14px;
+  }
+  .fot-con{
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    gap: 20px;
+  }
+  .foot-title{
+    font-size: small;
+    font:bolder
+  }
+  .foot-content{
+    font-size: x-small;
+  }
+  .std-container{
+    padding: 10px;
+  }
+  .std-box{
+    padding: 20px;
+  }
+  .std-title{
+    font-size: larger;
+  }
+  .std-content{
+    font-size: medium;
+  }
+  .std-photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin: 1px;
+  }
+  .std-name{
+    font-size: medium;
+  }
+  .std-id, .std-dep, .std-year, .std-core, .std-save{
+    font-size: small;
+  }
+  .std-btn{
+    font-size: x-small;
+    padding: 10px;
+  }
+  .std-area{
+    padding: 20px 10px;
+  }
+  .std-1, .std-3{
+    flex-grow: 1;
+  }
+  .std-2{
+    flex-grow: 2;
+  }
+  .nav-box{
+    padding: 10px;
+  }
+
+  .nav-logo{
+    width: 50px;
+    margin-right: 3px;
+  }
+  .nav-title{
+    font-size: large;
+    margin-right: 80px;
+  }
+  .nav-content{
+    font-size: small;
+    gap: 10px;
+    padding: 5px;
+  }
+
 }

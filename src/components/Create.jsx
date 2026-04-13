@@ -1,15 +1,15 @@
 import { useState } from "react"
 
-function Create(){
-  const [form, setForm] = useState({
-    name: "",
-    studentId: "",
-    department: "",
-    year: "",
-    core: ""
-  })
 
-  const [registered, setRegistered] = useState(false)
+function Create({setStudents}){
+   const [form, setForm] = useState({
+  photo: "",   // ✅ ADD THIS LINE
+  name: "",
+  studentId: "",
+  department: "",
+  year: "",
+  core: ""
+})
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -17,11 +17,16 @@ function Create(){
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (registered) return
-    
-    alert("Successfully registered")
-    setRegistered(true)
 
+    setStudents((prev) => [
+      ...prev,
+      {
+        ...form,
+        id: Date.now()
+      }
+    ])
+
+    alert("Successfully Created")
 
     setForm({
       name: "",
@@ -33,18 +38,40 @@ function Create(){
   }
 
     return(
-       <div className="flex flex-col items-center justify-center text-center my-15">
+       <div className="cre-con flex flex-col items-center justify-center text-center my-15">
 
-  <div className="form-box w-[80%] shadow-2xl rounded-4xl py-25">
+  <div className="form-box w-[80%] shadow-2xl rounded-4xl py-20">
 
     <h1 className="form-title text-3xl font-bold mb-15">
-      Register Now for Upcoming Events <i class="fa-regular fa-calendar"></i>
+      Create your Student List Here <i class="fa-solid fa-user-graduate"></i>
     </h1>
-    <div className=" px-70">
+    <div className="form-area px-60">
 <form onSubmit={handleSubmit}>
     <div className="flex flex-col gap-5 form-row">
 
-      <div className="form-row flex items-center gap-5">
+<div className="flex items-center gap-5">
+  <label className="form-label w-32 font-medium text-left">Profile :</label>
+  <label className="form-input flex-1 border rounded-lg p-2 cursor-pointer text-gray-500 text-left">
+    {form.photo ? "Image uploaded" : "Upload profile image"}
+
+    <input
+      type="file"
+      accept="image/*"
+      onChange={(e) => {
+        const file = e.target.files[0]
+        if (file) {
+          const imageUrl = URL.createObjectURL(file)
+          setForm({ ...form, photo: imageUrl })
+        }
+      }}
+      className="hidden"
+    />
+  </label>
+  
+</div>
+
+
+      <div className=" flex items-center gap-5">
         <label className="form-label w-32 font-medium text-left">Name :</label>
         <input
           type="text" name="name"
@@ -83,7 +110,7 @@ function Create(){
           type="text" name="year"
           value={form.year}
           onChange={handleChange}
-          placeholder="Enter year"
+          placeholder="Enter pursuing year"
           className="form-input flex-1 border rounded-lg p-2" required
         />
       </div>
@@ -99,12 +126,8 @@ function Create(){
         />
       </div>
 
-      <button  type="submit" disabled={registered} className= {`form-btn  text-white py-2 rounded-lg mt-5 ${
-            registered
-              ? "bg-gray-400 cursor-not-allowed text-gray-950"
-              : "bg-[#286eca] hover:bg-[#1F5AA6]"
-          }`}>
-        {registered ? "Registered" : "Register Now"}
+      <button  type="submit" className= "form-btn bg-[#286eca] hover:bg-[#1F5AA6] text-white py-2 rounded-lg mt-5 ">
+            Create Now
       </button>
 
     </div></form></div>

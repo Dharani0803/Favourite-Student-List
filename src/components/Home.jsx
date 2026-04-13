@@ -3,11 +3,11 @@ import Create from "./Create"
 import About from "./About"
 import Contact from "./Contact"
 
-function Home(){
+function Home({setStudents}){
     return(
         <div>
             <Content/>
-            <Create/>
+            <Create setStudents={setStudents}/>
             <About/>
             <Contact/>   
         </div>

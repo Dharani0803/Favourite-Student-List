@@ -17,15 +17,15 @@ function Contact(){
   }
 
     return(
-    <div className="flex items-center justify-center my-10">
+    <div className="abt-container flex items-center justify-center my-10">
 
-      <form onSubmit={handleSubmit} className="w-[60%]  p-10 text-center">
+      <form onSubmit={handleSubmit} className="con-box w-[60%]  p-10 text-center">
 
-        <h1 className="text-3xl font-bold mb-4">
+        <h1 className="con-title text-3xl font-bold mb-4">
           Contact With Us <i class="fa-regular fa-envelope"></i>
         </h1>
 
-        <p className=" mb-6">
+        <p className="abt-content mb-6">
           Enter your email to get updates and contact us.
         </p>
 
@@ -36,12 +36,12 @@ function Contact(){
             placeholder="Enter your email" required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border rounded-lg p-2 w-[60%] "
+            className="form-input border rounded-lg p-2 w-[60%] "
           />
 
           <button type="submit"
             disabled={subscribed}
-            className={`px-5 rounded-lg text-white ${
+            className={`con-btn px-5 rounded-lg text-white ${
               subscribed
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-[#286eca] hover:bg-[#1F5AA6]"
