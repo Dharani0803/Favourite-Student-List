@@ -1,7 +1,7 @@
 function About(){
     return(
         
-        <div className="abt-container flex flex-col items-center justify-center text-center mt-30">
+        <div className="abt-container flex flex-col items-center justify-center text-center mt-25">
             <div className="abt-box w-[80%] shadow-2xl p-15 rounded-4xl">
             <h1  className="abt-title text-3xl font-bold mb-7">About Us <i class="fa-solid fa-users"></i></h1>
             <p className="abt-content text-lg">

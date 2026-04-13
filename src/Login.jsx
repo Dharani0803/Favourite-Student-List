@@ -2,8 +2,11 @@ import { useState } from "react"
 import Image from "./assets/bg.2.avif"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
+import { useContext } from "react"
+import { StudentContext } from "./context/StudentContext"
 
 function Login(props) {
+    const { setUser } = useContext(StudentContext)
     const navigate=useNavigate()
     const[euser,seteuser]=useState()
     const[epassword,setepasswoed]=useState()
@@ -26,7 +29,8 @@ function Login(props) {
         {
             if(item.username==euser && item.password==epassword){
                 userfound=true
-                navigate("/landing",{state:{user:euser}})
+                setUser(euser)
+                navigate("/landing")
             }
         
         })

@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { StudentContext } from "../context/StudentContext"
-import { useState } from "react"
 import Profile from "../assets/profile.png"
 
 
@@ -35,7 +34,7 @@ function StudentList({students}) {
             <p className="std-year text-[17px] font-semibold">Year: <span className="text-gray-500 font-normal"> {student.year}</span></p>
             <p className="std-core text-[17px] font-semibold">Core: <span className="text-gray-500 font-normal"> {student.core}</span></p>
           </div>
-          
+
           <div  className="std-3 flex-1  text-center">
             <p className="std-save text-lg text-red-500 cursor-pointer mt-5"  onClick={() => addFavourite(student)}>
                <i className={ isLiked ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>{" "}Save</p>

@@ -5,8 +5,8 @@ export const StudentContext = createContext()
 export function StudentProvider({ children }) {
 
   const [favourites, setFavourites] = useState([])
+  const [user, setUser] = useState("")
 
-  // ADD
   const addFavourite = (student) => {
     setFavourites(prev =>
       prev.find(s => s.id === student.id)
@@ -15,7 +15,6 @@ export function StudentProvider({ children }) {
     )
   }
 
-  // REMOVE
   const removeFavourite = (id) => {
     setFavourites(prev =>
       prev.filter(student => student.id !== id)
@@ -26,7 +25,9 @@ export function StudentProvider({ children }) {
     <StudentContext.Provider value={{
       favourites,
       addFavourite,
-      removeFavourite
+      removeFavourite,
+      user,
+      setUser
     }}>
       {children}
     </StudentContext.Provider>

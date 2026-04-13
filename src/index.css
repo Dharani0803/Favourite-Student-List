@@ -84,14 +84,21 @@
   .con-btn{
     font-size: 14px;
   }
+
   .fot-con{
     flex-wrap: wrap;
-    padding: 20px 40px;
+    padding: 15px 30px;
     gap: 20px;
+  }
+  .fot-content{
+    font-size: small;
+  }
+  .fot-title{
+    font-size: medium;
   }
   .foot-title{
     font-size: small;
-    font:bolder
+    font:bold
   }
   .foot-content{
     font-size: x-small;
