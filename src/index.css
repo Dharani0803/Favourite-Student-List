@@ -53,6 +53,7 @@
   .form-label {
     text-align: left;
     font-size: medium;
+    width: 100px;
   }
 
   .form-input {
