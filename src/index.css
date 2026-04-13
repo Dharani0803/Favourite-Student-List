@@ -1,6 +1,7 @@
 @import "tailwindcss"; 
 
 @media screen and (max-width:900px) {
+
 .content-text{
   padding: 20px 5px;
 }
@@ -21,10 +22,13 @@
   font-size: small;
   padding: 10px ;
 }
+.btn-primary {
+  margin-bottom: 5px;
+}
 
 .content-image {
   width: 100%;
-  height: 100%;
+  height: 85%;
 }
 .cre-con{
   margin-top: 30px;
