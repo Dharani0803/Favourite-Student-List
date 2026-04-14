@@ -27,14 +27,13 @@
 }
 
 .content-image {
-  width: 100%;
-  height: 85%;
+  display: none;
 }
 .cre-con{
-  margin-top: 30px;
+  margin-top: 25px;
 }
 .form-box {
-    width: 85%;
+    width: 95%;
     padding: 50px 30px ;
   }
 .form-area{
@@ -70,7 +69,7 @@
   }
 
   .abt-box{
-    width: 80%;
+    width: 90%;
     padding: 40px  ;
   }
   .abt-title{
@@ -140,27 +139,33 @@
   .std-area{
     padding: 20px 10px;
   }
-  .std-1, .std-3{
+  .std-1{
     flex-grow: 1;
   }
   .std-2{
     flex-grow: 2;
   }
+  .nav{
+    display: flex;
+    flex-direction: column;
+  }
   .nav-box{
     padding: 10px;
   }
-
   .nav-logo{
+    display: flex;
+    justify-content: center;
+  }
+  .nav-logo img {
     width: 50px;
-    margin-right: 3px;
+    margin-right: 2px;
   }
   .nav-title{
     font-size: large;
-    margin-right: 80px;
   }
   .nav-content{
     font-size: small;
-    gap: 10px;
+    justify-content:center;
     padding: 5px;
   }
 
