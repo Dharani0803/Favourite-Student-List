@@ -84,7 +84,7 @@
   }
   .con-title{
     font-size: larger;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .con-btn{
     font-size: 14px;
@@ -138,13 +138,15 @@
   }
   .std-area{
     padding: 20px 10px;
+    display: flex;
   }
-  .std-1{
+  .std-1,.std-3{
     flex-grow: 1;
   }
   .std-2{
     flex-grow: 2;
   }
+  
   .nav{
     display: flex;
     flex-direction: column;
