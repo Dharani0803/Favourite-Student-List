@@ -48,8 +48,8 @@ function FavouriteStudents() {
              <i className={ isLiked ? "fa-solid fa-heart text-red-500" : "fa-regular fa-heart text-red-500"}></i>
               {" "}Save</p>
             <button
-              className="std-btn bg-red-500 text-white rounded-2xl font-semibold p-3 mt-10"
-              onClick={() => removeFavourite(student.id)}>Remove</button>
+              className="std-btn bg-red-500 text-white rounded-2xl font-semibold p-3 mt-10 cursor-pointer"
+              onClick={() => removeFavourite(student.id)}><i className="fa-solid fa-circle-xmark"></i> Remove</button>
 
           </div></div>
         )})

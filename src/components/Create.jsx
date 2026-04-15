@@ -126,7 +126,7 @@ function Create({setStudents}){
         />
       </div>
 
-      <button  type="submit" className= "form-btn bg-[#286eca] hover:bg-[#1F5AA6] text-white py-2 rounded-lg mt-5 ">
+      <button  type="submit" className= "form-btn bg-[#286eca] hover:bg-[#1F5AA6] text-white py-2 rounded-lg mt-5 cursor-pointer">
             Create Now
       </button>
 

@@ -163,12 +163,18 @@
     margin-right: 2px;
   }
   .nav-title{
-    font-size: large;
+    font-size: larger;
   }
   .nav-content{
     font-size: small;
     justify-content:center;
     padding: 5px;
+  }
+  .nav-content p:hover{
+    font:bolder;
+    color:#2e2e2e;
+    border-bottom: 2px solid #045289;
+    cursor: pointer;
   }
 
 }

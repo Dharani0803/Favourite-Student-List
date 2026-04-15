@@ -41,7 +41,7 @@ function Contact(){
 
           <button type="submit"
             disabled={subscribed}
-            className={`con-btn px-5 rounded-lg text-white ${
+            className={`con-btn px-5 rounded-lg cursor-pointer text-white ${
               subscribed
                 ? "bg-gray-400 cursor-not-allowed"
                 : "bg-[#286eca] hover:bg-[#1F5AA6]"

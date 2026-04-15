@@ -48,7 +48,7 @@ function Login(props) {
                 
                 <h1 className="text-3xl font-bold mb-2">Hey Hii👋</h1>
 
-                {ruser?<p className="mb-4">I help you manage your activities after you login :)</p>:<p className="text-red-500 mb-4">Please Sign Up before you Log In!!</p>}
+                {ruser?<p className="mb-4">I help you manage your activities after you login :)</p>:<p className="text-red-500 mb-4"><i className="fa-solid fa-triangle-exclamation"></i> Please Sign Up before you Log In!!</p>}
 
                 <div className="flex flex-col gap-3">
                     <input

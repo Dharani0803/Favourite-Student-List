@@ -38,7 +38,7 @@ function StudentList({students}) {
           <div  className="std-3 flex-1  text-center">
             <p className="std-save text-lg text-red-500 cursor-pointer mt-5"  onClick={() => addFavourite(student)}>
                <i className={ isLiked ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>{" "}Save</p>
-            <button className="std-btn mt-10 bg-[#1F5AA6] p-3 text-white rounded-2xl font-semibold disabled:opacity-50 disabled:bg-[#D8D8D8] disabled:text-gray-900" onClick={() => addFavourite(student)} disabled={alreadyAdded}>
+            <button className="std-btn mt-10 bg-[#1F5AA6] p-3 text-white rounded-2xl font-semibold disabled:opacity-50 disabled:bg-[#D8D8D8] disabled:text-gray-900 cursor-pointer" onClick={() => addFavourite(student)} disabled={alreadyAdded}>
                {alreadyAdded ? "Added" : "Add to Favourites"}</button>
           </div>
           </div>

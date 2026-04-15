@@ -10,6 +10,9 @@ function Login(props) {
 
     const[euser,seteuser]=useState()
     const[epassword,setepasswoed]=useState()
+
+    const [cpassword, setcpassword] = useState()
+    const [error, setError] = useState("")
      
     function handleUInput(evt){
         seteuser(evt.target.value)
@@ -19,10 +22,26 @@ function Login(props) {
         setepasswoed(evt.target.value)
     }
 
-    function addUser(){
-        setusers([...users,{username:euser,password:epassword}])
+    function handleCInput(evt){
+    setcpassword(evt.target.value)
+    }  
+
+   function addUser() {
+        if (!euser || !epassword || !cpassword) {
+            setError(" Please fill all fields")
+            return
+        }
+
+        if (epassword !== cpassword) {
+            setError(" Your password is mismatch, enter carefully")
+            return
+        }
+
+        setusers([...users, { username: euser, password: epassword }])
+        setError("")
         navigate("/")
     }
+
 
     return (
         <div 
@@ -33,9 +52,11 @@ function Login(props) {
                 
                 <h1 className="text-3xl font-bold mb-2">Hey Hii👋</h1>
 
-                <p className="mb-4">
-                    You can Signup here :)
+                <p className={`mb-4 ${error ? "text-red-400" : "text-white"}`}>
+                    {error && <i className="fa-solid fa-triangle-exclamation"></i>}
+                    {error ? error : "You can Signup here :)"}
                 </p>
+
 
                 <div className="flex flex-col gap-3">
                     <input
@@ -53,7 +74,7 @@ function Login(props) {
                     <input
                         type="password"
                         className="w-60 border border-white p-2 bg-transparent rounded-md focus:outline-none focus:ring-1"
-                        placeholder="Confirm Password"
+                        placeholder="Confirm Password" onChange={handleCInput}
                     />
 
                     <button className="bg-amber-300 text-black w-60 p-2 rounded-md" onClick={addUser}>
